@@ -51,8 +51,8 @@ const startCount = () => {
       cuatro === 0 && cinco === 0 && seis === 0
     ) {
       // 🔊 Cargar y reproducir sonido al hacer clic en el botón
-      const jigsawLaughAudio = new Audio(jigsawLaugh);
-      jigsawLaughAudio.volume = 0.6;
+      const jigsawLaugh = new Audio("https://github.com/PRIMED587/PROYECTO-CONTADOR-SIMPLE-SAW-PSC/raw/refs/heads/main/src/sound/jigsawlaugh.mp3");
+        jigsawLaugh.volume = 0.6;
 
       // Mostrar alerta temática
       Swal.fire({
