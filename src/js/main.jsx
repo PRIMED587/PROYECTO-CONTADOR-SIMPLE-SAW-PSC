@@ -1,15 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom/client'
 import Swal from 'sweetalert2';
-
-// Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap"
-
-// index.css
 import '../styles/index.css'
-
-// components
 import Contador from './components/Contador';
 
 let uno = 0, dos = 0, tres = 0, cuatro = 0, cinco = 0, seis = 0;
@@ -50,11 +44,11 @@ const startCount = () => {
       uno === 0 && dos === 0 && tres === 0 &&
       cuatro === 0 && cinco === 0 && seis === 0
     ) {
-      // 🔊 Cargar y reproducir sonido al hacer clic en el botón
+      
       const jigsawLaugh = new Audio("https://github.com/PRIMED587/PROYECTO-CONTADOR-SIMPLE-SAW-PSC/raw/refs/heads/main/src/sound/jigsawlaugh.mp3");
         jigsawLaugh.volume = 0.6;
 
-      // Mostrar alerta temática
+      
       Swal.fire({
         title: '¿Quieres jugar un juego?',
         text: 'El contador ha comenzado... toma tus decisiones sabiamente.',
@@ -65,12 +59,12 @@ const startCount = () => {
         color: '#ff0000',
         iconColor: '#ff0000',
         confirmButtonColor: '#8B0000',
-        confirmButtonText: 'Comenzar',
+        confirmButtonText: 'CONTINUAR',
         allowOutsideClick: false,
         allowEscapeKey: false,
         allowEnterKey: false,
         didOpen: () => {
-          // Esperar a que la alerta esté completamente cargada antes de reproducir sonido
+          
           jigsawLaugh.play().catch(() => {
             console.warn("El navegador bloqueó la reproducción automática del sonido.");
           });
